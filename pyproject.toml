@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vidgrab"
+version = "1.0.0"
+authors = [{ name = "ibrahimkhacef5-del" }]
+description = "Simple video downloader CLI using yt-dlp"
+requires-python = ">=3.8"
+license = "MIT"
+dependencies = [
+    "yt-dlp>=2024.0.0",
+]
+
+[project.scripts]
+vidgrab = "vidgrab.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["vidgrab*"]
